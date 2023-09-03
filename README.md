@@ -17,8 +17,8 @@ This is a personal diary entry app made using tkinter and chromadb. The ui is ma
 
 [link to video]([Link Here](https://github.com/Abm32/Chroma-sh/assets/110992125/88bfef26-971c-4f4b-a05b-7e5699944f98))
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+1. The user can store daily entries in the app and can write again in the same file.
+2. [video of project demo](https://github.com/Abm32/Chroma-sh/assets/110992125/88bfef26-971c-4f4b-a05b-7e5699944f98)
 ## Libraries used
 Tkinter  
 Chromadb  
