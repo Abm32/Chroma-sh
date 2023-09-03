@@ -3,7 +3,7 @@
 
 
 # Project Name
-This is a personal diary entry app made using tkinter and chromadb. The ui is made using tkinter in python and the chromadb is used for storing the data and accessing it. The diary app can store the entry and can open the same entry and rewrite it again.
+This is a personal diary entry app made using tkinter and chromadb. The ui is made using tkinter in python and the chromadb is used for storing the data and accessing it. The diary app can store the entry and can open the same entry and rewrite it again. In development......
 ## Team members
 1. [Abhimanyu R B](https://github.com/Abm32)
 2. [Amrose Sakaria](https://github.com/AMROSE-SAKARIA)
