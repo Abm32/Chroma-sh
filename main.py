@@ -1,56 +1,43 @@
-import tkinter as tk
-from tkinter import messagebox
+import chromadb
+import uuid  # Import the UUID module to generate unique IDs
 
-# Function to save the diary entry to a file
-def save_entry():
-    entry_text = entry.get("1.0", "end-1c")
-    if entry_text.strip():
-        with open("diary.txt", "a") as diary_file:
-            diary_file.write(entry_text + "\n")
-        messagebox.showinfo("Success", "Diary entry saved successfully!")
-        entry.delete("1.0", "end")
+def create_database():
+  db = chromadb.Client()
+  return db
 
-# Function to view previous diary entries
-def view_entries():
-    try:
-        with open("diary.txt", "r") as diary_file:
-            entries = diary_file.readlines()
-            if entries:
-                view_window = tk.Toplevel(root)
-                view_window.title("Diary Entries")
+def add_entry(db, title, content):
+  collection = db.get_collection("entries")
 
-                scrollbar = tk.Scrollbar(view_window)
-                scrollbar.pack(side="right", fill="y")
+  # Generate a unique ID using UUID
+  unique_id = str(uuid.uuid4())
 
-                text_box = tk.Text(view_window, wrap="word", yscrollcommand=scrollbar.set, bg="#F0F0F0", fg="black", font=("Arial", 12))
-                text_box.pack()
+  document = {
+    "title": title,
+    "content": content,
+    "id": unique_id  # Use the generated unique ID as a string
+  }
 
-                scrollbar.config(command=text_box.yview)
+  collection.upsert(document)
 
-                for entry in entries:
-                    text_box.insert("end", entry)
+def get_entries(db):
+  collection = db.get_collection("entries")
 
-                text_box.config(state="disabled")
-            else:
-                messagebox.showinfo("No Entries", "No diary entries found.")
-    except FileNotFoundError:
-        messagebox.showinfo("No Entries", "No diary entries found.")
+  return collection.select()
 
-# Create the main application window
-root = tk.Tk()
-root.title("Personal Diary App")
-root.geometry("400x400")
-root.configure(bg="#E0E0E0")
+def main():
+  db = create_database()
 
-# Create a text box for entering diary entries
-entry = tk.Text(root, wrap="word", width=40, height=10, bg="white", fg="black", font=("Arial", 12))
-entry.pack(pady=10)
+  db.create_collection("entries")
 
-# Create buttons to save and view diary entries
-save_button = tk.Button(root, text="Save Entry", command=save_entry, bg="#4CAF50", fg="white", font=("Arial", 12))
-view_button = tk.Button(root, text="View Entries", command=view_entries, bg="#3498DB", fg="white", font=("Arial", 12))
-save_button.pack()
-view_button.pack()
+  title = input("Enter title: ")
+  content = input("Enter content: ")
 
-# Run the Tkinter main loop
-root.mainloop()
+  add_entry(db, title, content)
+
+  entries = get_entries(db)
+
+  for entry in entries:
+    print(entry)
+
+if __name__ == "__main__":
+  main()
