@@ -8,9 +8,13 @@ This is a personal diary entry app made using tkinter and chromadb. The ui is ma
 1. [Abhimanyu R B](https://github.com/Abm32)
 2. [Amrose Sakaria](https://github.com/AMROSE-SAKARIA)
 ## Link to product walkthrough
-![Uploading Screenshot (208).png…]()
 
-[link to video](Link Here)
+
+
+
+
+
+[link to video]([Link Here](https://github.com/Abm32/Chroma-sh/assets/110992125/88bfef26-971c-4f4b-a05b-7e5699944f98))
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
