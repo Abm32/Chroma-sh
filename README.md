@@ -3,18 +3,25 @@
 
 
 # Project Name
-Long Description about project. This project do that. This project is awesome...
+This is a personal diary entry app made using tkinter and chromadb. The ui is made using tkinter in python and the chromadb is used for storing the data and accessing it. The diary app can store the entry and can open the same entry and rewrite it again.
 ## Team members
-1. [Name 1](https://github.com/TH-Activities/saturday-hack-night-template)
-2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
+1. [Abhimanyu R B](https://github.com/Abm32)
+2. [Amrose Sakaria](https://github.com/AMROSE-SAKARIA)
 ## Link to product walkthrough
 [link to video](Link Here)
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Library Name - Version
+Tkinter  
+Chromadb  
 ## How to configure
-Instructions for setting up project
+Step 1 : Clone the git repository  
+Step 2 : Configure the virtual environment to avoid conflice between packages.  
+Step 3 : Install the modules used in the product, ie.,  
+         &#9;pip install tkinter  
+         pip install chromadb  
+Step 4 : Try running the program and voila!  
+Step 5 : If facing any issues try using chatgpt or bard to figure out the issue  
 ## How to Run
-Instructions for running
+Just configure it properly and run the program. If faced with any problem resolve it using chatgpt.
