@@ -9,6 +9,7 @@ This is a personal diary entry app made using tkinter and chromadb. The ui is ma
 2. [Amrose Sakaria](https://github.com/AMROSE-SAKARIA)
 ## Link to product walkthrough
 
+![Screenshot (208)](https://github.com/Abm32/Chroma-sh/assets/110992125/1a1f039f-32eb-43fc-8284-4ee28bd4d635)
 
 
 
