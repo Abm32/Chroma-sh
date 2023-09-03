@@ -19,7 +19,7 @@ Chromadb
 Step 1 : Clone the git repository  
 Step 2 : Configure the virtual environment to avoid conflice between packages.  
 Step 3 : Install the modules used in the product, ie.,  
-         ensp pip install tkinter  
+         &#9;pip install tkinter  
          pip install chromadb  
 Step 4 : Try running the program and voila!  
 Step 5 : If facing any issues try using chatgpt or bard to figure out the issue  
