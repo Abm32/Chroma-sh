@@ -22,7 +22,7 @@ def view_entries():
                 scrollbar = tk.Scrollbar(view_window)
                 scrollbar.pack(side="right", fill="y")
 
-                text_box = tk.Text(view_window, wrap="word", yscrollcommand=scrollbar.set)
+                text_box = tk.Text(view_window, wrap="word", yscrollcommand=scrollbar.set, bg="#F0F0F0", fg="black", font=("Arial", 12))
                 text_box.pack()
 
                 scrollbar.config(command=text_box.yview)
@@ -39,14 +39,16 @@ def view_entries():
 # Create the main application window
 root = tk.Tk()
 root.title("Personal Diary App")
+root.geometry("400x400")
+root.configure(bg="#E0E0E0")
 
 # Create a text box for entering diary entries
-entry = tk.Text(root, wrap="word", width=40, height=10)
+entry = tk.Text(root, wrap="word", width=40, height=10, bg="white", fg="black", font=("Arial", 12))
 entry.pack(pady=10)
 
 # Create buttons to save and view diary entries
-save_button = tk.Button(root, text="Save Entry", command=save_entry)
-view_button = tk.Button(root, text="View Entries", command=view_entries)
+save_button = tk.Button(root, text="Save Entry", command=save_entry, bg="#4CAF50", fg="white", font=("Arial", 12))
+view_button = tk.Button(root, text="View Entries", command=view_entries, bg="#3498DB", fg="white", font=("Arial", 12))
 save_button.pack()
 view_button.pack()
 
